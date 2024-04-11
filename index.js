@@ -7,6 +7,7 @@ const app = express();
 app.use(cors());
 const port = 3000;
 
+
 // Create connection to MySQL database
 const connection = mysql.createConnection({
   host: 'localhost',
@@ -71,6 +72,40 @@ app.get('/users', (req, res) => {
       res.json(results);
   });
 });
+
+// Sign-in endpoint
+app.post('/signin', (req, res) => {
+  const { email, password } = req.body;
+
+  // Check if email and password are provided
+  if (!email || !password) {
+      return res.status(400).json({ error: 'Email and password are required' });
+  }
+
+  // Query the database to check if the user exists
+  connection.query('SELECT * FROM users WHERE email = ?', [email], (err, results) => {
+      if (err) {
+          console.error('Error querying database: ', err);
+          return res.status(500).json({ error: 'Internal server error' });
+      }
+
+      // Check if user with provided email exists
+      if (results.length === 0) {
+          return res.status(401).json({ error: 'User not found' });
+      }
+
+      const user = results[0];
+
+      // Check if the password matches
+      if (user.password !== password) {
+          return res.status(401).json({ error: 'Invalid password' });
+      }
+
+      // Authentication successful, return user data (you may want to omit the password here)
+      res.json({ id: user.id, name: user.name, email: user.email });
+  });
+});
+
 
 // Start server
 app.listen(port, () => {

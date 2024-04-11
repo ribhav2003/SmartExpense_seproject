@@ -3,23 +3,24 @@
 
 <head>
   <link href="https://fonts.googleapis.com/css2?family=Cambria:wght@300;400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="signup.css" />
+  <link rel="stylesheet" href="signin.css" />
 </head>
 
 <body>
   <section class="background-texture"></section>
   <div class="card-container">
     <h2>Sign In</h2>
-    <form class="form">
-      <input type="email" placeholder="Email" />
-      <input type="password" placeholder="Password" />
+    <form class="form" id="signinForm">
+      <input type="email" placeholder="Email" id = "emailInput" />
+      <input type="password" placeholder="Password" id = "passwordInput" />
       <button type="submit">SIGN IN</button>
     </form>
     <footer>
       Don't have an account yet?
-      <a href="#">Sign Up here</a>
+      <a href="signup.html">Sign Up here</a>
     </footer>
   </div>
+  <script src="signin.js"></script>
 </body>
 
 </html>
