@@ -22,8 +22,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
             const userData = await response.json();
             console.log('User signed in successfully:', userData);
+            
+            // Store user session
+            sessionStorage.setItem('userId', userData.id);
+            sessionStorage.setItem('userName', userData.name);
+            sessionStorage.setItem('userEmail', userData.email);
+
+            // Redirect to home.html
             window.location.href = 'home.html';
-            // Optionally, you can redirect the user to another page or perform other actions
         } catch (error) {
             console.error('Error signing in:', error.message);
             // Optionally, you can display an error message to the user

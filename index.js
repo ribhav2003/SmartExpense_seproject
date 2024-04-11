@@ -1,10 +1,21 @@
 const express = require('express');
+const session = require('express-session');
 const mysql = require('mysql');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 
 const app = express();
 app.use(cors());
+app.set('view engine', 'ejs'); // Set EJS as the view engine
+
+// Initialize session middleware
+app.use(session({
+    secret: 'secret', // Change this to a random string for better security
+    resave: false,
+    saveUninitialized: true
+}));
+
+
 const port = 3000;
 
 
