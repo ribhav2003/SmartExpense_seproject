@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Expense</title>
+</head>
+<body>
+    <h1>Add Expense</h1>
+
+    <form id="expenseForm">
+        <label for="expenseName">Expense Name:</label>
+        <input type="text" id="expenseName" name="expenseName" required><br><br>
+
+        <label for="expenseType">Expense Type:</label>
+        <select id="expenseType" name="expenseType" required>
+            <option value="daily_needs">Daily Needs</option>
+            <option value="friends_and_family">Friends and Family</option>
+            <option value="bills">Bills</option>
+            <option value="eatables">Eatables</option>
+            <option value="miscellaneous">Miscellaneous</option>
+        </select><br><br>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <script src="add_expense.js"></script>
+</body>
+</html>

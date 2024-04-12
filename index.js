@@ -117,6 +117,9 @@ app.post('/signin', (req, res) => {
   });
 });
 
+const add_expense_endpoint = require('./Manageexpense/add_expense_endpoint')(connection);
+app.use(add_expense_endpoint);
+
 
 // Start server
 app.listen(port, () => {
