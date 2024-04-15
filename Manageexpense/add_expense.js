@@ -6,7 +6,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
         const expenseName = document.getElementById('expenseName').value;
         const expenseType = document.getElementById('expenseType').value;
-        const userId = sessionStorage.getItem('userId'); // Retrieve userId from sessionStorage
+        const amount = document.getElementById('amount').value;
+        const userId = sessionStorage.getItem('userId');
+
+        // Get current date in YYYY-MM-DD format
+        const currentDate = new Date().toISOString().slice(0, 10);
 
         try {
             const response = await fetch('http://localhost:3000/addexpense', {
@@ -14,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 headers: {
                     'Content-Type': 'application/json'
                 },
-                body: JSON.stringify({ expenseName, expenseType, userId }) // Include userId in the request body
+                body: JSON.stringify({ expenseName, expenseType, amount, userId, date: currentDate }) // Include date in the request body
             });
 
             if (!response.ok) {

@@ -4,13 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Manage Expenses</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cambria:wght@300;400;500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="manage_expenses.css" />
 </head>
 <body>
-    <h1>Manage Expenses</h1>
+    <section class="background-texture"></section>
+    <div class="card-container">
+        <h2>Manage Expenses</h2>
 
-    <button onclick="redirectTo('Manageexpense/add_expense.html')">Add Expense</button>
-    <button onclick="redirectTo('view_expenses.html')">View Expenses</button>
+        <!-- Previous Expenses Section -->
+        <section class="previous-expenses">
+            <h3>Previous Expenses</h3>
+            <ul id="previous-expenses-list">
+                <!-- Previous expenses will be populated here dynamically -->
+            </ul>
+        </section>
 
+        <button onclick="redirectTo('Manageexpense/add_expense.html')">Add Expense</button>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="manage_expenses.js"></script>
     <script>
         function redirectTo(page) {
             window.location.href = page;

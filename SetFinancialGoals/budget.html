@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set Financial Goals</title>
+</head>
+<body>
+    <h1>Set Financial Goals</h1>
+    <form id="budgetForm">
+        <label for="month">Month:</label>
+        <select id="month" name="month" required>
+            <option value="">Select Month</option>
+            <option value="1">January</option>
+            <option value="2">February</option>
+            <option value="3">March</option>
+            <option value="4">April</option>
+            <option value="5">May</option>
+            <option value="6">June</option>
+            <option value="7">July</option>
+            <option value="8">August</option>
+            <option value="9">September</option>
+            <option value="10">October</option>
+            <option value="11">November</option>
+            <option value="12">December</option>
+        </select>
+
+        <label for="year">Year:</label>
+        <input type="number" id="year" name="year" min="1900" max="2100" required>
+
+        <label for="overallBudget">Overall Budget:</label>
+        <input type="number" id="overallBudget" name="overallBudget" required>
+
+        <!-- Allocation for expense categories -->
+        <label for="dailyNeeds">Daily Needs Allocation:</label>
+        <input type="number" id="dailyNeeds" name="dailyNeeds" required>
+
+        <label for="friendsFamily">Friends and Family Allocation:</label>
+        <input type="number" id="friendsFamily" name="friendsFamily" required>
+
+        <label for="bills">Bills Allocation:</label>
+        <input type="number" id="bills" name="bills" required>
+
+        <label for="eatables">Eatables Allocation:</label>
+        <input type="number" id="eatables" name="eatables" required>
+
+        <label for="miscellaneous">Miscellaneous Allocation:</label>
+        <input type="number" id="miscellaneous" name="miscellaneous" required>
+
+        <button type="submit">Set Budget</button>
+    </form>
+
+    <!-- Include budget.js script here -->
+    <script src="budget.js"></script>
+</body>
+</html>

@@ -120,6 +120,12 @@ app.post('/signin', (req, res) => {
 const add_expense_endpoint = require('./Manageexpense/add_expense_endpoint')(connection);
 app.use(add_expense_endpoint);
 
+const budget_endpoint = require('./SetFinancialGoals/budget_endpoint')(connection);
+app.use(budget_endpoint);
+
+const viewBudget_endpoint = require('./ViewBudget/viewBudget_endpoint')(connection);
+app.use(viewBudget_endpoint);
+
 
 // Start server
 app.listen(port, () => {
