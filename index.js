@@ -126,6 +126,10 @@ app.use(budget_endpoint);
 const viewBudget_endpoint = require('./ViewBudget/viewBudget_endpoint')(connection);
 app.use(viewBudget_endpoint);
 
+const expenseTrend_endpoint= require('./PredictiveInsights/expenseTrend_endpoint.js')(connection);
+app.use(expenseTrend_endpoint);
+
+
 
 // Start server
 app.listen(port, () => {
