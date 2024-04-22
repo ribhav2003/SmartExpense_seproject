@@ -15,7 +15,7 @@ module.exports = function(connection) {
             }
 
             // Insert the expense into the expenses table
-            connection.query('INSERT INTO expenses (user_id, expense_name, expense_type, amount, date) VALUES (?, ?, ?, ?, ?)', [userId, expenseName, expenseType, amount, currentDate], (err, result) => {
+            connection.query('INSERT INTO expenses (user_id, expense_name, expense_type, amount, date) VALUES (?, ?, ?, ?, CURDATE())', [userId, expenseName, expenseType, amount], (err, result) => {
                 if (err) {
                     console.error('Error adding expense:', err);
                     return res.status(500).json({ error: 'Error adding expense' });
