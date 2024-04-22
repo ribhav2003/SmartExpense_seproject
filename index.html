@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+    rel="stylesheet">
+
+  <title>SmartExpense</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!--
+
+TemplateMo 570 Chain App Dev
+
+https://templatemo.com/tm-570-chain-app-dev
+
+-->
+
+  <!-- Additional CSS Files -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <link rel="stylesheet" href="assets/css/templatemo-chain-app-dev.css">
+  <link rel="stylesheet" href="assets/css/animated.css">
+  <link rel="stylesheet" href="assets/css/owl.css">
+
+</head>
+
+<body>
+
+  <!-- ***** Preloader Start ***** -->
+  <div id="js-preloader" class="js-preloader">
+    <div class="preloader-inner">
+      <span class="dot"></span>
+      <div class="dots">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </div>
+  <!-- ***** Preloader End ***** -->
+
+  <!-- ***** Header Area Start ***** -->
+  <header class="header-area header-sticky wow slideInDown" data-wow-duration="0.75s" data-wow-delay="0s">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <nav class="main-nav">
+            <!-- ***** Logo Start ***** -->
+            <a href="index.html" class="logo">
+              <img src="assets/images/_e93c0eaa-1719-49f3-8f16-aa6b980.jpg" alt="SmartExpense">
+            </a>
+            <!-- ***** Logo End ***** -->
+            <!-- ***** Menu Start ***** -->
+            <ul class="nav">
+              <li class="scroll-to-section"><a href="#top" class="active">Home</a></li>
+              <li class="scroll-to-section"><a href="#services">Services</a></li>
+              <li class="scroll-to-section"><a href="#about">About</a></li>
+              <li class="scroll-to-section"><a href="#contactus">Contact Us</a></li>
+              <li>
+                <div class="gradient-button"><a id="modal_trigger" href="#modal"><i class="fa fa-sign-in-alt"></i> Sign
+                    In Now</a></div>
+              </li>
+            </ul>
+            <a class='menu-trigger'>
+              <span>Menu</span>
+            </a>
+            <!-- ***** Menu End ***** -->
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- ***** Header Area End ***** -->
+
+  <div id="modal" class="popupContainer" style="display:none;">
+    <div class="popupHeader">
+      <span class="header_title">Login</span>
+      <span class="modal_close"><i class="fa fa-times"></i></span>
+    </div>
+
+    <section class="popupBody">
+      <!-- Social Login -->
+      <div class="social_login">
+        <div class="action_btns">
+          <div class="one_half"><a href="signin.html" id="login_form_button" class="btn">Login</a></div>
+          <div class="one_half last"><a href="signup.html" id="register_form_button" class="btn">Sign up</a></div>
+        </div>
+      </div>
+
+      <!-- Username & Password Login form -->
+      <div class="user_login">
+        <form>
+          <label>Email / Username</label>
+          <input type="text" />
+          <br />
+
+          <label>Password</label>
+          <input type="password" />
+          <br />
+
+          <div class="checkbox">
+            <input id="remember" type="checkbox" />
+            <label for="remember">Remember me on this computer</label>
+          </div>
+
+          <div class="action_btns">
+            <div class="one_half"><a href="#" class="btn back_btn"><i class="fa fa-angle-double-left"></i> Back</a>
+            </div>
+            <div class="one_half last"><a href="#" class="btn btn_red">Login</a></div>
+          </div>
+        </form>
+
+        <a href="#" class="forgot_password">Forgot password?</a>
+      </div>
+
+      <!-- Register Form -->
+      <div class="user_register">
+        <form>
+          <label>Full Name</label>
+          <input type="text" />
+          <br />
+
+          <label>Email Address</label>
+          <input type="email" />
+          <br />
+
+          <label>Password</label>
+          <input type="password" />
+          <br />
+
+          <div class="checkbox">
+            <input id="send_updates" type="checkbox" />
+            <label for="send_updates">Send me occasional email updates</label>
+          </div>
+
+          <div class="action_btns">
+            <div class="one_half"><a href="#" class="btn back_btn"><i class="fa fa-angle-double-left"></i> Back</a>
+            </div>
+            <div class="one_half last"><a href="#" class="btn btn_red">Register</a></div>
+          </div>
+        </form>
+      </div>
+    </section>
+  </div>
+
+  <div class="main-banner wow fadeIn" id="top" data-wow-duration="1s" data-wow-delay="0.5s">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="row">
+            <div class="col-lg-6 align-self-center">
+              <div class="left-content show-up header-text wow fadeInLeft" data-wow-duration="1s" data-wow-delay="1s">
+                <div class="row">
+                  <div class="col-lg-12">
+                    <h2>Take Control of Your Finances with SmartExpense+</h2>
+                    <p>Take charge of your finances and watch your wealth grow. SmartExpense offers intuitive tools and expert insights to help you make smarter financial decisions.   From budgeting to expense tracking, our app provides everything you need to stay on top of your money matters. Say goodbye to financial stress and hello to financial freedom!</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="right-image wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.5s">
+                <img src="assets/images/slider-dec.png" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="services" class="services section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 offset-lg-2">
+          <div class="section-heading  wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.5s">
+            <h4>Amazing <em>Services &amp; Features</em> for you</h4>
+            <img src="assets/images/heading-line-dec.png" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3">
+          <div class="service-item first-service">
+            <div class="icon"></div>
+            <h4>Predictive Insights</h4>
+            <p> We provide predictive insights on all your expenses and potential savings opportunities.
+              Get notifications on potential over-spending and underutilizing of your budget.</p>
+          </div>
+        </div>
+        <div class="col-lg-3">
+          <div class="service-item second-service">
+            <div class="icon"></div>
+            <h4>Manage Expenses</h4>
+            <p>You can categorize your expenses manually or automatically through bank integration.</p>
+          </div>
+        </div>
+        <div class="col-lg-3">
+          <div class="service-item third-service">
+            <div class="icon"></div>
+            <h4>Set Financial Goals</h4>
+            <p>Set your financial goals towards a vacation or an emergency fund.
+              We provide recommendations for achieving your goals faster and you can track them.</p>
+          </div>
+        </div>
+        <div class="col-lg-3">
+          <div class="service-item fourth-service">
+            <div class="icon"></div>
+            <h4>Budget</h4>
+            <p>Utilize our machine learning algorithms to analyze your historical spending patterns.
+              We generate intelligent budget recommendations based on your income, spending habits, and financial goals.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="about" class="about-us section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 align-self-center">
+          <div class="section-heading">
+            <h4>About <em>What We Do</em> &amp; Who We Are</h4>
+            <img src="assets/images/heading-line-dec.png" alt="">
+            <p> As students passionate about financial literacy and management, we embarked on the journey of creating SmartExpense with a clear vision: to revolutionize personal finance for individuals like us. Inspired by our own experiences and the challenges we faced in managing our finances during our student years, we envisioned a tool that would simplify and streamline this process for others. Join us on this journey as we leverage the power of technology to transform personal finance and pave the way for a brighter financial tomorrow for all .</p>
+          </div>
+
+        </div>
+        <div class="col-lg-6">
+          <div class="right-image">
+            <img src="assets/images/about-right-dec.png" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="clients" class="the-clients">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 offset-lg-2">
+          <div class="section-heading">
+            <h4>Check What <em>Our Users Say</em> About SmartExpense</h4>
+            <img src="assets/images/heading-line-dec.png" alt="">
+            <p>Don’t just take our word for it, see what others are saying! Check out the reviews and join our community
+              of satisfied users today!</p>
+          </div>
+        </div>
+        <div class="col-lg-12">
+          <div class="naccs">
+            <div class="grid">
+              <div class="row">
+                <div class="col-lg-7 align-self-center">
+                  <div class="menu">
+                    <div class="first-thumb active">
+                      <div class="thumb">
+                        <div class="row">
+                          <div class="col-lg-4 col-sm-4 col-12">
+                            <h4>Swastik Singh</h4>
+                            <span class="date">28 July 2023</span>
+                          </div>
+                          <div class="col-lg-4 col-sm-4 d-none d-sm-block">
+                            <span class="category">College Student</span>
+                          </div>
+                          <div class="col-lg-4 col-sm-4 col-12">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <span class="rating">4.8</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div>
+                      <div class="thumb">
+                        <div class="row">
+                          <div class="col-lg-4 col-sm-4 col-12">
+                            <h4>Ribhav Jain</h4>
+                            <span class="date">22 march 2024</span>
+                          </div>
+                          <div class="col-lg-4 col-sm-4 d-none d-sm-block">
+                            <span class="category">College Student</span>
+                          </div>
+                          <div class="col-lg-4 col-sm-4 col-12">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <span class="rating">4.5</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div>
+                      <div class="thumb">
+                        <div class="row">
+                          <div class="col-lg-4 col-sm-4 col-12">
+                            <h4>Akshay Sharma</h4>
+                            <span class="date">4 April 2024</span>
+                          </div>
+                          <div class="col-lg-4 col-sm-4 d-none d-sm-block">
+                            <span class="category">College Student</span>
+                          </div>
+                          <div class="col-lg-4 col-sm-4 col-12">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <span class="rating">4.7</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div>
+                      <div class="thumb">
+                        <div class="row">
+                          <div class="col-lg-4 col-sm-4 col-12">
+                            <h4>Akshat Shashi</h4>
+                            <span class="date">9 April 2024</span>
+                          </div>
+                          <div class="col-lg-4 col-sm-4 d-none d-sm-block">
+                            <span class="category">College Student</span>
+                          </div>
+                          <div class="col-lg-4 col-sm-4 col-12">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <span class="rating">3.9</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+                <div class="col-lg-5">
+                  <ul class="nacc">
+                    <li class="active">
+                      <div>
+                        <div class="thumb">
+                          <div class="row">
+                            <div class="col-lg-12">
+                              <div class="client-content">
+                                <img src="assets/images/quote.png" alt="">
+                                <p>“I’ve been using this expense tracker for a few days now and it’s been a
+                                  game-changer. The View Budget feature has helped me manage my finances
+                                  like never before. Highly recommended!”</p>
+                              </div>
+                              <div class="down-content">
+                                <img src="assets/images/WhatsApp Image 2024-04-12 at 23.19.33 (1).jpeg" alt="">
+                                <div class="right-content">
+                                  <h4>Swastik Singh</h4>
+                                  <span>College Student</span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <div class="thumb">
+                          <div class="row">
+                            <div class="col-lg-12">
+                              <div class="client-content">
+                                <img src="assets/images/quote.png" alt="">
+                                <p>“This app is a lifesaver! It’s easy to use and the budgeting tools are incredibly
+                                  helpful. I’ve been able to save more money and understand my spending habits better.”</p>
+                              </div>
+                              <div class="down-content">
+                                <img src="assets/images/WhatsApp Image 2024-04-12 at 23.19.32 (1).jpeg" alt="">
+                                <div class="right-content">
+                                  <h4>Ribhav Jain</h4>
+                                  <span>College Stduent</span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <div class="thumb">
+                          <div class="row">
+                            <div class="col-lg-12">
+                              <div class="client-content">
+                                <img src="assets/images/quote.png" alt="">
+                                <p>“I love this app! It’s user-friendly and has made tracking my expenses a breeze.It’s like having a personal finance
+                                  advisor in my pocket.”</p>
+                              </div>
+                              <div class="down-content">
+                                <img src="assets/images/WhatsApp Image 2024-04-12 at 23.19.32.jpeg" alt="">
+                                <div class="right-content">
+                                  <h4>Akshay Sharma</h4>
+                                  <span>College Student</span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <div class="thumb">
+                          <div class="row">
+                            <div class="col-lg-12">
+                              <div class="client-content">
+                                <img src="assets/images/quote.png" alt="">
+                                <p>“This is the best expense tracker app I’ve used. It’s intuitive, efficient, and makes
+                                  managing finances simple and stress-free. The updates always bring useful features.
+                                  Keep up the good work!”</p>
+                              </div>
+                              <div class="down-content">
+                                <img src="assets/images/WhatsApp Image 2024-04-12 at 23.19.32 (2).jpeg" alt="">
+                                <div class="right-content">
+                                  <h4>Akshat Shashi</h4>
+                                  <span>College Student</span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <div class="thumb">
+                          <div class="row">
+                            <div class="col-lg-12">
+                              <div class="client-content">
+                                <img src="assets/images/quote.png" alt="">
+                                <p>“This is the best expense tracker app I’ve used. It’s intuitive, efficient, and makes
+                                  managing finances simple and stress-free. The updates always bring useful features.
+                                  Keep up the good work!”</p>
+                              </div>
+                              <div class="down-content">
+                                <img src="assets/images/WhatsApp Image 2024-04-12 at 23.19.33.jpeg" alt="">
+                                <div class="right-content">
+                                  <h4>Ryan Reynolds</h4>
+                                  <span>Celebrity</span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer id="newsletter">
+    <div class="container">
+    
+    
+        <div class="col-lg-12">
+          <div class="copyright-text">
+            <p>Copyright © 2024 SmartExpense. All Rights Reserved.
+              <br><a href="https://templatemo.com/" target="_blank" title="css templates"></a><br>
+
+              <a href="https://themewagon.com/" target="_blank" title="Bootstrap Template World"></a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- Scripts -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/owl-carousel.js"></script>
+  <script src="assets/js/animation.js"></script>
+  <script src="assets/js/imagesloaded.js"></script>
+  <script src="assets/js/popup.js"></script>
+  <script src="assets/js/custom.js"></script>
+
+  <script>
+    // Add an event listener to the "Sign Up" button
+    document.getElementById("register_form_button").addEventListener("click", function(event) {
+      // Prevent the default behavior of the link
+      event.preventDefault();
+      // Redirect to the signup.html page
+      window.location.href = "signup.html";
+    });
+  </script>
+
+<script>
+  // Add an event listener to the "Sign In" button
+  document.getElementById("login_form_button").addEventListener("click", function(event) {
+    // Prevent the default behavior of the link
+    event.preventDefault();
+    // Redirect to the signin.html page
+    window.location.href = "signin.html";
+  });
+</script>
+
+  
+</body>
+
+</html>

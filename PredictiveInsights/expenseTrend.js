@@ -135,6 +135,10 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     function displayPredictedExpense(predictedExpense) {
+
+        if (myChart) {
+            myChart.destroy();
+        }
         let html = '<h2>Predicted Next Month Expenses</h2>';
         html += `<p>Predicted expense for the next month: $${predictedExpense.toFixed(2)}</p>`;
         contentDiv.innerHTML = html;
