@@ -86,6 +86,7 @@ def predict_future_expense(model, last_date, X_train_columns):
     
     return predicted_expense
 
+
 # Endpoint for predicting next month's expenses
 @app.route('/predict-next-month-expense', methods=['GET'])
 def predict_next_month_expense():
