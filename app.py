@@ -3,7 +3,7 @@ import mysql.connector
 import pandas as pd
 from sklearn.ensemble import RandomForestRegressor
 from datetime import datetime, timedelta
-from flask_cors import CORS  #
+from flask_cors import CORS  
 
 app = Flask(__name__)
 CORS(app)  # Enable CORS for all routes
@@ -15,7 +15,7 @@ def fetch_data_from_database(user_id):
     mydb = mysql.connector.connect(
         host="localhost",
         user="root",
-        password="root",
+        password="tiger",
         database="users"
     )
 

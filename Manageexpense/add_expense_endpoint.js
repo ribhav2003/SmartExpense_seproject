@@ -28,22 +28,7 @@ module.exports = function(connection) {
 
     // Define a new route to fetch expenses data for a specific user ID
 
-router.get('/api/expenses', (req, res) => {
-    const userId = req.query.userId;
 
-    // Prepare the SQL query to fetch expenses data for the specified user ID
-    const sql = 'SELECT * FROM expenses WHERE user_id = ?';
-
-    // Execute the SQL query with the user ID as a parameter
-    connection.query(sql, [userId], (err, rows) => {
-        if (err) {
-            console.error('Error fetching expenses:', err);
-            return res.status(500).json({ error: 'Error fetching expenses' });
-        }
-        console.log('Expenses fetched successfully');
-        res.status(200).json(rows); // Send the fetched expenses data as a JSON response
-    });
-});
 
 
     

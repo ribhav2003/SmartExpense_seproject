@@ -23,7 +23,7 @@ const port = 3000;
 const connection = mysql.createConnection({
   host: 'localhost',
   user: 'root',
-  password: 'root',
+  password: 'tiger',
   database: 'users'
 });
 
@@ -128,6 +128,22 @@ app.use(viewBudget_endpoint);
 
 const expenseTrend_endpoint= require('./PredictiveInsights/expenseTrend_endpoint.js')(connection);
 app.use(expenseTrend_endpoint);
+
+app.get('/api/expenses/:userId', (req, res) => {
+  const userId = req.params.userId;
+      const query = "SELECT * FROM expenses WHERE user_id = ?";
+      connection.query(query, [userId], (err, results) => {
+          if (err) {
+              console.error('Error fetching expenses:', err);
+              res.status(500).json({ error: 'Internal Server Error' });
+              return;
+          }
+
+          res.status(200).json(results);
+      });
+  });
+
+
 
 
 
