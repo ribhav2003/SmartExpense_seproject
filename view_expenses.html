@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Expenses</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cambria:wght@300;400;500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="view_expenses.css" />
+</head>
+<body>
+    <section class="background-texture"></section>
+    <div class="card-container">
+        <h2>Previous Expenses</h2>
+        <section class="previous-expenses">
+            <table id="expenses-table"></table>
+
+        </section>
+
+        <button onclick="redirectTo('Manageexpense/add_expense.html')">Add Expense</button>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="view_expenses.js"></script>
+    <script>
+        function redirectTo(page) {
+            window.location.href = page;
+        }
+    </script>
+</body>
+</html>

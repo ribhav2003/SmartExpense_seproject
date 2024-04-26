@@ -1,0 +1,71 @@
+/* Base body styling */
+body {
+    font-family: 'Arial', sans-serif; /* Consistent font throughout the page */
+    background-color: #f0f4f8; /* Soft blue background for lightness */
+    color: #333; /* Dark grey color for text for readability */
+    padding: 20px; /* Padding around the content inside body */
+    margin: 0; /* Removes default margin */
+}
+
+/* Header styles */
+h1 {
+    color: #0056b3; /* Blue color for the header to match theme */
+    text-align: center; /* Centers the heading */
+}
+
+/* Form styling */
+form {
+    background-color: white; /* Sets form background to white */
+    padding: 20px; /* Padding inside the form */
+    border-radius: 8px; /* Rounded corners for the form */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    max-width: 500px; /* Maximum width of the form */
+    margin: 40px auto; /* Centers the form horizontally and gives space vertically */
+}
+
+/* Label styling */
+label {
+    font-weight: bold; /* Bold font for labels */
+    margin-bottom: 10px; /* Space below each label */
+    display: block; /* Makes label appear on a new line */
+}
+
+/* Input and Select field styling */
+input[type="number"],
+select {
+    width: calc(100% - 20px); /* Adjusted width to accommodate for padding */
+    padding: 8px; /* Padding for better text visibility */
+    margin-top: 5px; /* Space above the input field */
+    margin-bottom: 15px; /* Space below the input field */
+    border: 2px solid #0056b3; /* Blue border matching the theme */
+    border-radius: 4px; /* Rounded corners for the input fields */
+}
+
+/* Adjust padding for select element */
+select {
+    padding: 8px; /* Match padding with input elements */
+}
+
+/* Button styling */
+button {
+    background-color: #007bff; /* Brighter blue for visibility and consistency */
+    margin-left: 5px;
+    color: white; /* Text color for the button */
+    padding: 10px 15px; /* Padding to make the button larger and easier to click */
+    border: none; /* No border for a cleaner look */
+    border-radius: 5px; /* Rounded corners for the button */
+    cursor: pointer; /* Pointer cursor on hover */
+    width: calc(102% - 20px); /* Adjusted width to accommodate for padding */
+    font-size: 16px; /* Slightly larger font for better readability *
+}
+
+button:hover {
+    background-color: #0056b3; /* Darker blue on hover for interactive effect */
+}
+
+/* Focus styling for interactive elements */
+input[type="number"]:focus,
+select:focus,
+button:hover {
+    transition: background-color 0.3s, border-color 0.3s; /* Smooth transition for focus and hover */
+}
